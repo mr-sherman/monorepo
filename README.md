@@ -41,6 +41,7 @@ cat results-before.sarif | jq '(..|.uri? | select( . != null)) |= "govwa/"+. ' >
 ```
 
 Now we can upload each of those results.sarif files independently using the ```codeql github upload``` command.
+You can see how the results are rendered by clicking on the "Security" tab above and viewing the code scanning alerts.
 
 ## Considerations for the CodeQL Runner. 
 If you're using the CodeQL Runner, you'll want to use the ```--category``` flag in the runner's ```analyze``` step.  Use this in the same manner as the ```sarif-category``` flag of the CLI.  
